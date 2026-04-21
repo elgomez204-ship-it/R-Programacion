@@ -1,0 +1,2 @@
+nombre = "Juan"
+edad = 22
