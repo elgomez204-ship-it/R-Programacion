@@ -1,0 +1,36 @@
+from flask import Flask
+
+aplicacion = Flask(__name__)
+
+@aplicacion.route("/")
+def raiz():
+  return '''
+    <!doctype html>
+<html lang="es">
+  <head>
+    <title>JUANblog</title>
+    <meta charset="utf-8">
+    <style>
+      body{background:steelblue;color:steelblue;font-family:sans-serif;}
+      header,main,footer{background:white;padding:20px;margin:auto;width:600px;}
+      header,footer{text-align:center;}
+      main{color:black;}
+    </style>
+  </head>
+  <body>
+    <header><h1>JUANblog</h1></header>
+    <main>
+      <article>
+        <h3>Titulo del articulo</h3>
+        <time>2026-03-16</time>
+        <p>Juan Patino</p>
+        <p>Este es el contenido de un artículo ficticio</p>
+      </article>
+    </main>
+    <footer>(c)2026 Juan Patino</footer>
+  </body>
+</html>
+  '''
+  
+if __name__ == "__main__":
+  aplicacion.run(debug=True)
