@@ -1,0 +1,18 @@
+CREATE USER 
+'corporacion2026'@'localhost' 
+IDENTIFIED  BY 'Corporacion2026$';
+
+
+GRANT USAGE ON *.* TO 'corporacion2026'@'localhost';
+
+ALTER USER 'corporacion2026'@'localhost' 
+REQUIRE NONE 
+WITH MAX_QUERIES_PER_HOUR 0 
+MAX_CONNECTIONS_PER_HOUR 0 
+MAX_UPDATES_PER_HOUR 0 
+MAX_USER_CONNECTIONS 0;
+
+GRANT ALL PRIVILEGES ON corporacion2026.* 
+TO 'corporacion2026'@'localhost';
+
+FLUSH PRIVILEGES;
